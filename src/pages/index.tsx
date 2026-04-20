@@ -6,7 +6,6 @@ import dayjs from 'dayjs';
 
 export const getServerSideProps = (async () => {
   const response = await fetch('https://fakerapi.it/api/v1/books', { cache: "default" })
-
   const books: ResponseBook = await response.json()
 
   return { props: { books } }
